@@ -2,6 +2,9 @@ import React from 'react'
 
 export default function SignInRoute() {
   return (
-    <div>Sign In Route</div>
+    <div>
+      <input type="text" placeholder='Email'/>
+      <input type="password" placeholder='Password'/>
+    </div>
   )
 }
