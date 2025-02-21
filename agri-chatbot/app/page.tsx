@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { useState } from "react";
 import { Send, Loader2, RefreshCw } from "lucide-react";
 
@@ -13,7 +13,7 @@ export default function AgriChatBotInterface() {
   const [input, setInput] = useState<string>("");
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
-  const handleSubmit = async (event:React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     if (!input.trim()) return "Ask me about agriculture";
 
@@ -50,7 +50,7 @@ export default function AgriChatBotInterface() {
       <div className="flex flex-col h-screen max-w-4xl mx-auto p-4">
         {/* Header */}
         <div className="flex justify-between items-center mb-4 p-4 bg-green-50 rounded-lg">
-          <h1 className="text-2xl font-bold text-green-800">
+          <h1 className="text-2xl  font-Nunito_Sans font-bold text-green-800">
             Agricultural Assistant
           </h1>
           <button
