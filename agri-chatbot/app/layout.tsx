@@ -1,9 +1,7 @@
 "use client";
 
-
 import { Outfit } from "next/font/google";
 import "./globals.css";
-import { useRouter } from "next/navigation";
 import {
   ClerkProvider,
   SignInButton,
@@ -13,7 +11,7 @@ import {
   UserButton,
 } from "@clerk/nextjs";
 
-// const nunito = Nunito_Sans();
+
 const outfit = Outfit();
 
 export default function RootLayout({
@@ -21,7 +19,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const router = useRouter();
+
   return (
     <ClerkProvider>
       <html lang="en">
