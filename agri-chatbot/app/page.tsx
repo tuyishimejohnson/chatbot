@@ -7,7 +7,7 @@ export default function AgriChatBotInterface() {
     {
       type: "system",
       content:
-        "Welcome to the Agricultural Assistant! I can help you with farming-related questions. Feel free to ask about crops, soil, weather, or any agricultural topics.",
+        "Welcome to the Agricultural Assistant! Feel free to ask about crops, soil, weather, or any agricultural topics.",
     },
   ]);
   const [input, setInput] = useState<string>("");
@@ -50,7 +50,7 @@ export default function AgriChatBotInterface() {
       <div className="flex flex-col h-screen max-w-4xl mx-auto p-4">
         {/* Header */}
         <div className="flex justify-between items-center mb-4 p-4 bg-green-50 rounded-lg">
-          <h1 className="text-2xl  font-Nunito_Sans font-bold text-green-800">
+          <h1 className="text-2xl font-bold text-green-800">
             Agricultural Assistant
           </h1>
           <button

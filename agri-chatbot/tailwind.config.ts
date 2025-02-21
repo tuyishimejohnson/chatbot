@@ -15,7 +15,8 @@ export default {
 
       fontFamily: {
         Nunito_Sans: ["Nunito Sans", "sans-serif"],
-      }
+        Outfit: ["Outfit", "serif"],
+      },
     },
   },
   plugins: [],
