@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Send, Loader2, RefreshCw } from "lucide-react";
 
 export default function AgriChatBotInterface() {
@@ -45,6 +45,19 @@ export default function AgriChatBotInterface() {
       },
     ]);
   };
+
+  const fetchData = async () => {
+    const response = await fetch("http://localhost:8080/api/home/");
+    const data = await response.json();
+    console.log(data)
+    return data;
+  };
+
+
+  useEffect(() => {
+    fetchData()
+  }, [])
+
   return (
     <>
       <div className="flex flex-col h-screen max-w-4xl mx-auto p-4">
