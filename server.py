@@ -15,9 +15,10 @@ def return_home():
 
 @app.route("/http://localhost:3000/", methods=["POST", "GET"])
 def process():
-    return jsonify({
-        "message": "Hello world!!!!!!!!!!!!!!!!!!!!"
-    })
+    if method == "POST":
+        return jsonify({
+            "message": "Hello world!!!!!!!!!!!!!!!!!!!!"
+        })
 
 if __name__ == '__main__':
     app.run(debug=True, port=8080)

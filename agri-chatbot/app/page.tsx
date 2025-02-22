@@ -13,9 +13,20 @@ export default function AgriChatBotInterface() {
   const [input, setInput] = useState<string>("");
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
-  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
-    if (!input.trim()) return "Ask me about agriculture";
+    if (!input.trim()) return;
+
+    const response = await fetch("http://localhost:8080/api/home/", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ data: input }),
+    });
+
+    const result = await response.json()
+    console.log(result)
 
     // Add user message
     setMessages((prev) => [...prev, { type: "user", content: input }]);
@@ -47,16 +58,20 @@ export default function AgriChatBotInterface() {
   };
 
   const fetchData = async () => {
-    const response = await fetch("http://localhost:8080/api/home/");
-    const data = await response.json();
-    console.log(data)
-    return data;
+    try {
+      const response = await fetch("http://localhost:8080/api/home/");
+      const data = await response.json();
+      console.log(data);
+      return data;
+    } catch (error) {
+      console.error(`This is the error: ##### ${error}`)
+    }
+    
   };
 
-
   useEffect(() => {
-    fetchData()
-  }, [])
+    fetchData();
+  }, []);
 
   return (
     <>
