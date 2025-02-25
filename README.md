@@ -6,17 +6,12 @@ AgriChatBot is a web-based chatbot interface designed to assist users with agric
 
 Features
 
-**Interactive Chat Interface**: Users can send messages and receive responses from the chatbot.
-
-**System Messages**: Initial guidance message for users. 
-
-**API Integration**: Communicates with a backend API for fetching and sending messages.
-
-**Chat Clearing**: Allows users to reset the chat conversation.
-
-**Loading Indicator**: Shows a loading spinner when fetching a response.
-
-**User-friendly Design**: Simple and intuitive UI built with React and Tailwind CSS.
+- **Interactive Chat Interface**: Users can send messages and receive responses from the chatbot.
+- **System Messages**: Initial guidance message for users. 
+- **API Integration**: Communicates with a backend API for fetching and sending messages.
+- **Chat Clearing**: Allows users to reset the chat conversation.
+- **Loading Indicator**: Shows a loading spinner when fetching a response.
+- **User-friendly Design**: Simple and intuitive UI built with React and Tailwind CSS.
 
 Installation
 
