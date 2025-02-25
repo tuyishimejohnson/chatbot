@@ -11,7 +11,7 @@ Features
 - **API Integration**: Communicates with a backend API for fetching and sending messages.
 - **Chat Clearing**: Allows users to reset the chat conversation.
 - **Loading Indicator**: Shows a loading spinner when fetching a response.
-- **User-friendly Design**: Simple and intuitive UI built with React and Tailwind CSS.
+- **User-friendly Design**: Simple and intuitive UI built with Next.js and Tailwind CSS.
 
 Installation
 
@@ -21,14 +21,11 @@ Ensure you have the following installed on your system:
 
 Node.js (>= 14.x recommended)
 
-npm or yarn
-
 Steps to Run Locally
 
 Clone the repository:
 
-git clone https://github.com/tuyishimejohnson/agri-chatbot.git
-cd agri-chatbot
+git clone https://github.com/tuyishimejohnson/chatbot
 
 Install dependencies:
 
