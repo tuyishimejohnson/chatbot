@@ -25,8 +25,8 @@ export default function AgriChatBotInterface() {
       body: JSON.stringify({ data: input }),
     });
 
-    const result = await response.json()
-    console.log(result)
+    const result = await response.json();
+    console.log(result);
 
     // Add user message
     setMessages((prev) => [...prev, { type: "user", content: input }]);
@@ -39,8 +39,7 @@ export default function AgriChatBotInterface() {
         ...prev,
         {
           type: "assistant",
-          content:
-            "This is a simulated response. In the actual implementation, this would be replaced with the model's response.",
+          content: result,
         },
       ]);
       setIsLoading(false);
@@ -64,9 +63,8 @@ export default function AgriChatBotInterface() {
       console.log(data);
       return data;
     } catch (error) {
-      console.error(`This is the error: ##### ${error}`)
+      console.error(`This is the error: ##### ${error}`);
     }
-    
   };
 
   useEffect(() => {
